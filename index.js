@@ -9,12 +9,14 @@ if (process.version.slice(1).split(".")[0] < 8) throw new Error("Node 8.0.0 or h
 const Discord = require("discord.js");
 const express = require("express");
 const http = require('http')
+const readdir = promisify(require("fs").readdir);
 var app = express();
 var key = process.env.key
 // We also load the rest of the things we need in this file:
 const { promisify } = require("util");
 const cleverbot = require('cleverbot.io')
 const ordinal = require('ordinal-js')
+const Enmap = require("enmap")
 
 
 // This is your client. Some people call it `bot`, some people call it `self`,
