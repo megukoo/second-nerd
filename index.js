@@ -38,7 +38,6 @@ client.logger = require("./util/Logger");
 require("./modules/functions.js")(client);
 
 app.set('env', 'production')
-app.use(bodyParser.json())
 app.listen(process.env.PORT || 3000, function() {
   console.log("Running on port " + process.env.PORT)
 })
@@ -81,7 +80,11 @@ const init = async () => {
     client.on(eventName, event.bind(null, client));
     delete require.cache[require.resolve(`./events/${file}`)];
   });
-
+  
+  app.get("/", (req, res) => {
+   res.sendStatus(200) 
+  })
+          
 
 
 
