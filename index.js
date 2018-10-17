@@ -14,7 +14,6 @@ const readdir = promisify(require("fs").readdir);
 var app = express();
 var key = process.env.key
 // We also load the rest of the things we need in this file:
-const { promisify } = require("util");
 const cleverbot = require('cleverbot.io')
 const ordinal = require('ordinal-js')
 const Enmap = require("enmap")
