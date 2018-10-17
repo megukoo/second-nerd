@@ -83,10 +83,14 @@ const init = async () => {
     delete require.cache[require.resolve(`./events/${file}`)];
   });
   
-  app.get("/", (req, res) => {
+  app.get("/pulse", (req, res) => {
    res.sendStatus(200) 
   })
-          
+      
+  setInterval(() => {
+    http.get('http://technoturret.herokuapp.com/pulse')
+    
+  }, 300000)
 
 
 
