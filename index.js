@@ -99,7 +99,7 @@ const init = async () => {
 
   // Here we login the client.
   client.login(process.env.BOT_TOKEN);
-  client.user.setActivity("Vanessa-sama <3", {type: "LISTENING"})
+  
 
 // End top-level async/await function
 
