@@ -9,6 +9,7 @@ if (process.version.slice(1).split(".")[0] < 8) throw new Error("Node 8.0.0 or h
 const Discord = require("discord.js");
 const express = require("express");
 const http = require('http')
+const { promisify } = require("util");
 const readdir = promisify(require("fs").readdir);
 var app = express();
 var key = process.env.key
