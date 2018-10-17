@@ -22,7 +22,8 @@ module.exports = (client, message) => {
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
 
-
+  if (message.channel.id != '502148860945235978' && message.author.id != '411683313926012928') return;
+   
   let match =  matchMention(message.content)
 
   if (match || message.channel.type == 'dm') {
