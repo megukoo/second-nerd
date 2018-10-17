@@ -5,12 +5,7 @@ module.exports = async client => {
   var ordinal = require('ordinal-js')
   await client.wait(10000);
   //client.startChannel = client.channels.get('491777217920106508')
-
-  client.startChannel.send("began running")
-  let buildVer = process.env.HEROKU_RELEASE_VERSION
-  let numb = buildVer.match(/\d/g);
-  numb = numb.join("");
-  numb = parseInt(numb)
+  client.user.setActivity("Vanessa-sama <3", {type: "LISTENING"})
   // Both `wait` and `client.log` are in `./modules/functions`.
   client.logger.log(`[READY] ${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "ready");
   // client.user.setActivity(`in the ${ordinal.toOrdinal(numb)} timeline. Use ${process.env.prefix}help. ` + client.guilds.size + " guilds." , "Hi.", "https://www.roblox.com/My/Groups.aspx?gid=3643510", "PLAYING")
