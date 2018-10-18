@@ -88,7 +88,7 @@ const init = async () => {
   })
       
   setInterval(() => {
-    http.get('https://scaredy-min.herokuapp.com/pulse')
+    http.get('http://scaredy-min.herokuapp.com/pulse')
     
   }, 120000)
 
