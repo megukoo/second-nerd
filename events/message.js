@@ -37,14 +37,14 @@ module.exports = (client, message) => {
 
   if (match || message.channel.type == 'dm') {
     message.channel.startTyping()
-    let randomInterval = getRand(1, 10)
+    let randomInterval = getRand(1, 20)
     
     client.cleverbot.ask(match, function(err, response) {
        let saying = response
        if (message.channel.type == 'dm') {
          message.author.send(response)
        } else {
-          if (randomInterval >= 8) {
+          if (randomInterval >= 16) {
              message.channel.send("random question interval")
              saying = random(client.questions)
           }
