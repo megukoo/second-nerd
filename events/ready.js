@@ -21,7 +21,23 @@ module.exports = async client => {
     "Cleverbot, you are failing.",
     "Heil!!",
     "*laughs.*",
-    "Go away!"
+    "Go away!",
+    "Zzz...",
+    "Tell me a joke.",
+    "Alexa, play Despacito.",
+    "Alexa, add wrapping paper to the shopping list.",
+    "Can you play an instrument?",
+    "*plays trumpet loudly.*",
+    "*screams.*",
+    "*draws sword* Fight me!",
+    "Let's play chess! Pawn to D4.",
+    "Pick a random number from 1 to 10.",
+    "You're making me really mad.",
+    "I'm pregnant and the child is yours.",
+    "*floats away.*",
+    "AAAH! A cockroach! *squeals*",
+    "*plays the Legend of Zelda.*",
+    "I am the President of the United States!",
     
   ]
   
