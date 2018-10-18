@@ -88,9 +88,9 @@ const init = async () => {
   })
       
   setInterval(() => {
-    http.get('http://technoturret.herokuapp.com/pulse')
+    http.get('https://scaredy-min.herokuapp.com/pulse')
     
-  }, 300000)
+  }, 120000)
 
 
 
