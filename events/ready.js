@@ -38,6 +38,18 @@ module.exports = async client => {
     "AAAH! A cockroach! *squeals*",
     "*plays the Legend of Zelda.*",
     "I am the President of the United States!",
+    "Why did the chicken cross the road?",
+    "*eats pizza quickly.*",
+    "*parries sword.*",
+    "*lunges with sword.*",
+    "*shoots gun.*",
+    "*throws bombs.*",
+    "*uses a fighter jet to destroy you.*",
+    "*blocks with shield*",
+    "Can you lend me $20?",
+    "*screams*",
+    "*is sucked into blackhole.*",
+    "*feels your chest.*"
     
   ]
   
