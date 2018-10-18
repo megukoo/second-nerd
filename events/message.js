@@ -17,6 +17,13 @@ function getRand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
+function random(array) {
+   return array[Math.floor(Math.random() * array.length)] || "I like pizza. What is your favorite food?"
+}
+
+
+
+
 
 module.exports = (client, message) => {
   // It's good practice to ignore other bots. This also makes your bot ignore itself
@@ -25,14 +32,23 @@ module.exports = (client, message) => {
   if (message.channel.id != '502148860945235978' && message.author.id != '411683313926012928') return;
    
   let match =  matchMention(message.content)
+  
+  
 
   if (match || message.channel.type == 'dm') {
     message.channel.startTyping()
+    let randomInterval = getRand(1, 10)
+    
     client.cleverbot.ask(match, function(err, response) {
+       let saying = response
        if (message.channel.type == 'dm') {
          message.author.send(response)
        } else {
-         message.channel.send('<@!' + message.author.id + '> ' + response)
+          if (randomInterval >= 8) {
+             message.channel.send("random question interval")
+             saying = random(client.questions)
+          }
+         message.channel.send('<@!' + message.author.id + '> ' + saying)
        }
        message.channel.stopTyping()
     })
