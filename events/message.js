@@ -44,8 +44,7 @@ module.exports = (client, message) => {
        if (message.channel.type == 'dm') {
          message.author.send(response)
        } else {
-          if (randomInterval >= 16) {
-             message.channel.send("random question interval")
+          if (randomInterval >= 15) {
              saying = random(client.questions)
           }
          message.channel.send('<@!' + message.author.id + '> ' + saying)
